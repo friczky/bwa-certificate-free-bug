@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('/')->group(function () {
-    Route::get('/', [CertificateController::class, 'index'])->name('home');
+    Route::get('/', [CertificateController::class, 'generate'])->name('home');
     Route::get('/tambah', [CertificateController::class, 'tambah'])->name('tambah');
     Route::get('/generate', [CertificateController::class, 'generate'])->name('generate');
     Route::post('/tambah_list', [CertificateController::class, 'tambah_list'])->name('tambah_list');
